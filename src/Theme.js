@@ -4,7 +4,7 @@ const Theme = {
             main: "black",
         },
         secondary: {
-            main: "pink",
+            main: "grey",
         },
     },
 

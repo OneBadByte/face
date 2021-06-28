@@ -7,17 +7,17 @@ import ApiClient from "../../ApiClient";
 const useStyles = makeStyles({
     root:{
         background: Theme.background.primary.main,
-    }
+    },
 })
 
 function Home(){
     const classes = useStyles()
     return(
         <Grid container direction={"column"} justify={"center"} className={classes.root}>
-            <Canvas/>
-            <textarea>{ApiClient.getTodoList()}</textarea>
-            <Navbar/>
-
+            {/*<Canvas/>*/}
+            <Grid item xl={8} lg={8} md={8} sm={8} xs={8} justify={"center"}>
+                <img src={"./img/sans.jpg"} alt={"sans"} align={"center"}/>
+            </Grid>
         </Grid>
     )
 }
