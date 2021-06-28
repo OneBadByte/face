@@ -12,12 +12,10 @@ const useStyles = makeStyles({
 
 function Blog(){
     const classes = useStyles()
-    const api = new ApiClient()
-
     return(
         <Grid container direction={"column"} justify={"center"} className={classes.root}>
             <Canvas/>
-            <textarea>{api.getTodoList()}</textarea>
+            <textarea>{ApiClient.getTodoList()}</textarea>
             <Navbar/>
 
         </Grid>
