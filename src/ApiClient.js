@@ -4,10 +4,13 @@ const BASE_URL = "http://localhost:8080/"
 
 class ApiClient {
 
-     async getTodoList() {
+     static async getTodoList() {
         const json = await axios.get(`${BASE_URL}todo/getList`)
-         console.debug(json.data)
-         return json.data
+            .then(data =>{
+                console.log(`data back -> ${data}`)
+                return data.data
+            })
+         return json
     }
 }
 

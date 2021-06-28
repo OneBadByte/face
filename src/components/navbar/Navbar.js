@@ -16,10 +16,10 @@ function Navbar(){
     return(
         <Grid container direction={"row"} className={classes.root} justify={"center"}>
             <Grid item xl={1} lg={1} md={1} sm={1} xs={1} className={classes.buttons}>
-               <Button className={classes.buttons}>Test</Button>
+               <Button className={classes.buttons} href={"/blog"}>Blog</Button>
             </Grid>
             <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
-                <Button>Test</Button>
+                <Button href={"/todo"}>Todo</Button>
             </Grid>
             <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
                 <Button>Test</Button>
