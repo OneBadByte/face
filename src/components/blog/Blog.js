@@ -6,7 +6,7 @@ import ApiClient from "../../ApiClient";
 
 const useStyles = makeStyles({
     root:{
-        background: Theme.background.secondary.main,
+        background: Theme.background.primary,
     }
 })
 

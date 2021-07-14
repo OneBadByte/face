@@ -3,7 +3,7 @@ import {Route} from "react-router";
 import {BrowserRouter} from "react-router-dom";
 import Blog from "./components/blog/Blog";
 import Todo from "./components/todo/Todo";
-import Footer from "./components/footer/Footer";
+import Login from "./components/login/Login";
 
 function App() {
     return (
@@ -12,8 +12,8 @@ function App() {
             <Route exact={true} path={"/"} component={Home}/>
             <Route path={"/blog"} component={Blog}/>
             <Route path={"/todo"} component={Todo}/>
+            <Route path={"/login"} component={Login}/>
         </BrowserRouter>
-        <Footer/>
     </div>
   );
 }

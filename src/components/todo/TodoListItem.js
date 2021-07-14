@@ -6,14 +6,14 @@ function TodoListItem(props){
     const classes = useStyles()
     return(
         <Card className={classes.root}>
-            <Typography>{props.item.id} {props.item.title} {props.item.point}</Typography>
+            <Typography variant={"h4"}>{props.item.id} {props.item.point} {props.item.date} {props.item.title} </Typography>
         </Card>
     )
 }
 
 const useStyles = makeStyles({
     root:{
-        background: Theme.palette.secondary.main,
+        background: Theme.background.primary,
     },
 })
 

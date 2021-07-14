@@ -3,29 +3,29 @@ import Theme from "../../Theme";
 
 const useStyles = makeStyles({
     root:{
-        background: Theme.palette.primary.main,
+        height: "50px",
+        background: Theme.background.secondary,
     },
 
     buttons:{
-        background: Theme.palette.secondary.main
+        height: "100%",
+        background: Theme.buttons.background.primary,
+        color: Theme.font.light,
+        width: "100px",
+        borderRadius: "0px"
     }
 })
 
 function Navbar(){
     const classes = useStyles()
     return(
-        <Grid container direction={"row"} className={classes.root} justify={"center"}>
-            <Grid item xl={1} lg={1} md={1} sm={1} xs={1} className={classes.buttons}>
-               <Button className={classes.buttons} href={"/blog"}>Blog</Button>
-            </Grid>
-            <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
-                <Button href={"/todo"}>Todo</Button>
-            </Grid>
-            <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
-                <Button>Test</Button>
-            </Grid>
-            <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
-                <Button>Test</Button>
+        <Grid container direction={"row"} className={classes.root} justify={"left"}>
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={1} justify={"left"}>
+                <Button className={classes.buttons} href={"/"}>Home</Button>
+                <Button className={classes.buttons} href={"/blog"}>Blog</Button>
+                <Button className={classes.buttons} href={"/todo"}>Todo</Button>
+                <Button className={classes.buttons}>Test</Button>
+                <Button className={classes.buttons}>Test</Button>
             </Grid>
         </Grid>
     )

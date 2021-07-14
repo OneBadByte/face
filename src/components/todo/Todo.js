@@ -1,14 +1,14 @@
 import {Grid, makeStyles} from "@material-ui/core";
 import Navbar from "../navbar/Navbar";
-import Canvas from "../canvas/Canvas";
 import Theme from "../../Theme";
 import ApiClient from "../../ApiClient";
 import {useEffect, useState} from "react";
-import TodoListItem from "./TodoListItem";
+import TodoListSection from "./TodoListSection";
 
 const useStyles = makeStyles({
     root:{
-        background: Theme.background.secondary.main,
+        height: Theme.website.height,
+        background: Theme.background.primary,
     }
 })
 
@@ -26,11 +26,16 @@ function Todo(){
     )
 
     return(
-        <Grid container direction={"column"} justify={"center"} className={classes.root}>
-            <Canvas/>
-            <Navbar/>
-            <div>{todoList[0].title}</div>
-            <TodoListItem item={todoList[0]}/>
+        <Grid container direction={"row"} justify={"center"} className={classes.root}>
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} justify={"left"}>
+                <Navbar/>
+            </Grid>
+            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} justify={"center"} className={"selections"}>
+                <TodoListSection items={todoList}/>
+            </Grid>
+            {/*<div>{todoList[0].title}</div>*/}
+            {/*<TodoListItem item={todoList[0]}/>*/}
+            {/*<Footer/>*/}
         </Grid>
     )
 }
