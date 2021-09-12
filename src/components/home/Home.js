@@ -7,7 +7,7 @@ const useStyles = makeStyles({
         root: {
             background: Theme.background.primary,
             color: Theme.font.light,
-            textAlign: "center",
+            // textAlign: "center",
             height: "1000px"
         },
 
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 function Home() {
     const classes = useStyles()
     return (
-        <Grid container direction={"row"} justify={"center"} className={classes.root} spacing={1}>
+        <Grid container direction={"row"} className={classes.root} spacing={1}>
             <Grid item xl={12} lg={12} md={12} sm={12} xs={12} justify={"left"}>
                 <Navbar/>
             </Grid>

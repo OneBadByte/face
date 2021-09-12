@@ -4,6 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import Blog from "./components/blog/Blog";
 import Todo from "./components/todo/Todo";
 import Login from "./components/login/Login";
+import Papers from "./components/papers/Papers";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Route path={"/blog"} component={Blog}/>
             <Route path={"/todo"} component={Todo}/>
             <Route path={"/login"} component={Login}/>
+            <Route path={"/papers"} component={Papers}/>
         </BrowserRouter>
     </div>
   );

@@ -1,9 +1,9 @@
 
-const color1 = "#5e6472"
-const color2 = "#aed9e0"
-const color3 = "#B8F2E6"
-const color4 = "#faf3dd"
-const color5 = "#ffa69e"
+const color1 = "#353535"
+const color2 = "#284B63"
+const color3 = "#D9D9D9"
+// const color4 = "#faf3dd"
+const color5 = "#3C6E71"
 
 const Theme = {
     colors:{
@@ -12,6 +12,9 @@ const Theme = {
     background: {
         primary: color1,
         secondary: color2,
+        light: 'white',
+        dark: 'black',
+        success: ' #00FF00',
     },
 
     buttons:{
