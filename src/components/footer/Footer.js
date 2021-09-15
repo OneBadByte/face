@@ -6,7 +6,7 @@ function Footer(){
 
    return(
        <Grid container justify={"center"} direction={"row"} className={classes.root}>
-           <h1>Testing</h1>
+           <h1>Footer</h1>
        </Grid>
    )
 }
@@ -16,8 +16,8 @@ const useStyles = makeStyles({
         background: theme.footer.background,
         widthBottom: '0px',
         paddingBlock: "0px",
-        marginBottom: "-500px"
-        // position: "fixed"
+        marginBottom: "-500px",
+        color: theme.font.light
     }
 
 })

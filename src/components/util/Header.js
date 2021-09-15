@@ -6,21 +6,19 @@ const useStyles = makeStyles({
         width: '100%',
         textAlign: 'center',
         fontSize: '2vw',
+        color: Theme.font.light,
     },
 
     success:{
         background: Theme.background.success,
-        fontSize: '2vw',
     },
 
     error:{
         background: "red",
-        fontSize: '2vw',
     },
 
     trans:{
         background: "transparent",
-        fontSize: '2vw',
     },
 
 })

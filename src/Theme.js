@@ -20,7 +20,7 @@ const Theme = {
     buttons:{
         background: {
             primary: color5,
-            secondary: color2,
+            secondary: color1,
         },
     },
 
@@ -33,7 +33,7 @@ const Theme = {
     },
 
     footer:{
-        background: color3,
+        background: color5,
     }
 }
 

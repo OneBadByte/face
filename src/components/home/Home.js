@@ -12,11 +12,11 @@ const useStyles = makeStyles({
         },
 
         selections: {
-            backgroundColor: "purple",
-            height: "100%",
-            width: "100%",
-            textAlign: "center",
-            borderRadius: "5%",
+            // backgroundColor: "purple",
+            // height: "100%",
+            // width: "100%",
+            // textAlign: "center",
+            // borderRadius: "5%",
         },
     }
 )
@@ -24,31 +24,39 @@ const useStyles = makeStyles({
 function Home() {
     const classes = useStyles()
     return (
-        <Grid container direction={"row"} className={classes.root} spacing={1}>
-            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} justify={"left"}>
+        <Grid container direction={"row"} className={classes.root} justify={'center'}>
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                 <Navbar/>
             </Grid>
-            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} justify={"center"} className={"selections"}>
+            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} className={"selections"}>
                 <div className={classes.selections}>
-                    <p className={"selections"}>testing</p>
+                    <a href={'/blog'}>
+                        <img alt={'blog'} src={'./img/blogWriter.png'}/>
+                    </a>
                 </div>
             </Grid>
-            <Grid item xl={6} lg={6} md={6} sm={6} xs={1}>
+            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} className={"selections"}>
                 <div className={classes.selections}>
-                    <p>testing</p>
+                    <a href={'/todo'}>
+                        <img alt={'todo'} src={'./img/todo.png'}/>
+                    </a>
                 </div>
             </Grid>
-            <Grid item xl={6} lg={6} md={6} sm={6} xs={1}>
+            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} className={"selections"}>
                 <div className={classes.selections}>
-                    <p>testing</p>
+                    <a href={'/papers'}>
+                        <img alt={'article writer'} src={'./img/articleWriter.png'}/>
+                    </a>
                 </div>
             </Grid>
-            <Grid item xl={6} lg={6} md={6} sm={6} xs={1}>
+            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} className={"selections"}>
                 <div className={classes.selections}>
-                    <p>testing</p>
+                    <a href={'/pomodoro'}>
+                        <img alt={'pomodoro'} src={'./img/pomodoroTimer.png'}/>
+                    </a>
                 </div>
             </Grid>
-            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} justify={"left"}>
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                 <Footer/>
             </Grid>
         </Grid>

@@ -1,4 +1,4 @@
-import {Button, Grid, makeStyles, TextField, Typography} from "@material-ui/core";
+import {Button, Card, CardContent, Grid, makeStyles, TextField, Typography} from "@material-ui/core";
 import Navbar from "../navbar/Navbar";
 import Theme from "../../Theme";
 import Header from "../util/Header";
@@ -9,6 +9,10 @@ const useStyles = makeStyles({
     root:{
         height: Theme.website.height,
         background: Theme.background.primary,
+    },
+
+    card:{
+        background: Theme.background.secondary,
     },
 
     textAreas:{
@@ -22,7 +26,7 @@ const useStyles = makeStyles({
     },
 
     submitButton:{
-        background: Theme.buttons.background.secondary,
+        background: Theme.buttons.background.primary,
         width: '100%',
         height: '4vw',
         fontSize: '2vw',
@@ -40,17 +44,19 @@ function Login(){
             <Grid item xl={12} lg={12} md={12} sm={12} xs={12} justify={"left"}>
                 <Navbar/>
             </Grid>
-            <Grid item xl={8} lg={8} md={8} sm={12} xs={12} justify={"center"}>
-                <Header color={header} message={headerText}/>
-            </Grid>
-            <Grid item xl={6} lg={6} md={6} sm={6} xs={1} justify={"center"} className={"selections"}>
-                <Typography variant={'h4'} className={classes.text}>login:</Typography>
-                <TextField id={'username'}  className={classes.textAreas}  type={'text'} variant={'outlined'}/>
-                <br/>
-                <Typography variant={'h4'} className={classes.text}>password:</Typography>
-                <TextField  id={'password'} className={classes.textAreas} type={'password'} variant={'outlined'}/>
-                <br/>
-                <Button variant={"outlined"} className={classes.submitButton} onClick={submitLogin}>Login</Button>
+            <Grid item xl={8} lg={8} md={8} sm={8} xs={12} justify={"center"}>
+                    <Card className={classes.card}>
+                    <CardContent>
+                            <Header color={header} message={headerText}/>
+                            <Typography variant={'h4'} className={classes.text}>login:</Typography>
+                            <TextField id={'username'}  className={classes.textAreas}  type={'text'} variant={'outlined'}/>
+                            <br/>
+                            <Typography variant={'h4'} className={classes.text}>password:</Typography>
+                            <TextField  id={'password'} className={classes.textAreas} type={'password'} variant={'outlined'}/>
+                            <br/>
+                            <Button variant={"outlined"} className={classes.submitButton} onClick={submitLogin}>Login</Button>
+                    </CardContent>
+                </Card>
             </Grid>
         </Grid>
     )
